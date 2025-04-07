@@ -19,26 +19,17 @@ your_pipeline/
 This tool processes a merged VCF file to extract structural variant (SV) coordinates and saves them into BED files, with separate files for each tool (e.g., Delly, Manta, Smoove) based on the SUPP_VEC field.
 
 Requirements:
-
-Python 3.x
+- Python 3.x
 Dependencies:
-pysam (for handling VCF files)
-json (for mapping support vector to tools)
-csv (for writing BED files)
-Create a supp_vec_to_tool_map.json file (explained below).
-Install Dependencies:
-
-You can install the required Python dependencies using pip:
-
-```
-pip install pysam
-```
+- pysam (for handling VCF files)
+- json (for mapping support vector to tools)
+- csv (for writing BED files)
+- Create a supp_vec_to_tool_map.json file (explained below).
 
 Input:
 - vcf (VCF file to process)
 - output_prefix (Prefix for output BED files)
 - supp_vec_map (JSON file mapping SUPP_VEC bits to tools)
-
 
 Example. To run the script, use the following command:
 ```
